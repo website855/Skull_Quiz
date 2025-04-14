@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Skills Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcomeScreen" class="screen">
+        <h1 style="font-weight: bolder; color: rgb(243, 255, 16);">Welcome! Are you ready to test your knowledge about human skills? 🤔</h1>
+        <p style="font-weight: bolder; color: rgb(243, 255, 16);">Wanna test your knowledge about human skills??? Click "Start Quiz" to begin!</p>
+        <button id="startBtn" class="start-button">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quizScreen" class="screen" style="display: none;">
+        <h2 id="questionText"></h2>
+        <div class="options">
+            <button id="option1" class="quiz-option"></button>
+            <button id="option2" class="quiz-option"></button>
+            <button id="option3" class="quiz-option"></button>
+            <button id="option4" class="quiz-option"></button>
+        </div>
+        <div class="timer">
+            <span id="time">00:00</span> <i class="fas fa-clock"></i>
+        </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="resultScreen" class="screen" style="display: none;">
+        <h2>Quiz Completed! 🎉</h2>
+        <p>Final Score: <span id="finalScore"></span></p>
+        <p>Correct Answers: <span id="correctAnswers"></span></p>
+        <p>Incorrect Answers: <span id="incorrectAnswers"></span></p>
+        <p>Time Taken: <span id="totalTime"></span></p>
+        <div class="result-buttons">
+            <button id="showAnswersBtn">Show Answers</button>
+            <button id="showPieChartBtn">Show Pie Chart</button>
+        </div>
+        <div id="answerReviewContainer"></div>
+        <div id="pieChartContainer" style="display: none;">
+            <canvas id="pieChart" width="180" height="180"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>
